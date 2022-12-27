@@ -28,6 +28,11 @@ asking for activity suggestions.
 * As a user, I should be able to delete an activity after completion. 
 
 
+## Conclusion
+
+That's it! I hope you enjoy my Productivity Aid App!
+
+![Screenshot Final](https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-build-the-example/finished_product_ss.png)
 
 
 
