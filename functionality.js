@@ -15,7 +15,6 @@ function buildActivities(activity){
     li.textContent = `${activity} `    
     li.appendChild(btn)
     document.querySelector('#activities').appendChild(li)
-    btn.addEventListener('click', timer)
  }
 
 function handleDelete(e){
@@ -81,6 +80,7 @@ function timer () {
     list += '</ul>';
     notes.innerHTML = list;
    }
+
 
    submit.onclick = function (event) {
     event.preventDefault();
