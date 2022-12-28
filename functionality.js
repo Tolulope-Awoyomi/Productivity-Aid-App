@@ -11,9 +11,12 @@ function buildActivities(activity){
     let li = document.createElement('li')
     let btn = document.createElement('button')
     btn.addEventListener('click', handleDelete)
-    btn.textContent = ' done'
+    btn.textContent = 'delete' 
     li.textContent = `${activity} `    
     li.appendChild(btn)
+    let img = document.createElement("img");
+    img.src = "rb_okay.png";
+    li.appendChild(img)
     document.querySelector('#activities').appendChild(li)
  }
 
