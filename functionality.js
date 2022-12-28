@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
+function handleDelete(e){
+    e.target.parentNode.remove()
+}
 
  
