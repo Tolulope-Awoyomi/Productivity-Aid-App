@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         buildActivities(e.target.new_activity_description.value)
+        counter(e.target.new_activity_description.value)
         form.reset()
     })
 
@@ -19,6 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handleDelete(e){
     e.target.parentNode.remove()
+}
+
+let intervalID = setInterval(counter, 1000);
+function counter() {
+    let counter = document.getElementById('timer')
+    let parsedNumber = parseInt(counter.innerText);
+    console.log (parsedNumber)
+    counter.innerText = parsedNumber +=1
 }
 
  
