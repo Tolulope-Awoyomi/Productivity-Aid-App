@@ -21,7 +21,7 @@ function handleDelete(e){
     e.target.parentNode.remove()
 }
 
-let intervalID = setInterval(timer, 1000);
+
 
 function timer () {
     let timer = document.getElementById("timer")
@@ -49,21 +49,41 @@ function timer () {
   const pause = document.getElementById("pause");
   let minusButton = document.getElementById("minus");
   let plusButton = document.getElementById("plus");
+  let startButton = document.getElementById("start")
+
+  let start = document.getElementById("start")
+  start.addEventListener("click", function(event){
+    if (event.target.id === "restart") {
+        setInterval(timer, 1000);
+        event.target.id = "start"
+        event.target.textContent = "restart timer"}
+    
+    else {
+        intervalID = setInterval(timer, 1000);
+        setTimeout(intervalID);
+        event.target.id = "resume"
+        event.target.textContent = "resume timer"
+    }
+})
+    
   
   pause.addEventListener("click", function(event) {
       if (event.target.id === "resume") {
           intervalID = setInterval(timer, 1000);
           minusButton.removeAttribute("disabled")
           plusButton.removeAttribute("disabled")
+          startButton.removeAttribute("disabled")
           event.target.id = "pause"
           event.target.textContent = "pause timer"
       }
       else {
+        intervalID = setInterval(timer, 1000);
           clearInterval(intervalID);
           minusButton.setAttribute("disabled", true)
           plusButton.setAttribute("disabled", true)
+          startButton.setAttribute("disabled", true)
           event.target.id = "resume"
-          event.target.textContent = "start timer"
+          event.target.textContent = "resume timer"
       }
    });
 
