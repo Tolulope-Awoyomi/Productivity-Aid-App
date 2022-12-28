@@ -72,5 +72,15 @@ function timer () {
    const notesInput = document.querySelector('#note-input')
    const submit = document.querySelector('#submit')
 
-  
+   const notes_arr = [];
+   const displayNotes = () => {
+    let list = '<ul>';
+    notes_arr.forEach(notes => {
+        list += `<li> ${notes} </li>`;
+    })
+    list += '</ul>';
+    notes.innerHTML = list;
+   }
+
+   
 
