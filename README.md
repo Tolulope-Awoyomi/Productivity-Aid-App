@@ -20,7 +20,7 @@ There are three files:
 * As a user, I should be able to type an activity into the input field.
 * As a user, I should be able to click some form of a submit button.
 * As a user, I expect to see the activity provided appear I click the submit button.
-* As a user, when I run out of ideas on acitivities to do, I should be able to click a button 
+* As a user, when I run out of ideas on activities to do, I should be able to click a button 
 asking for activity suggestions.
 * As a user, I should be able to put a time-track on the amount of time spent on an activity.
 * As a user, I should be able to pause and resume this time-tracker. 
