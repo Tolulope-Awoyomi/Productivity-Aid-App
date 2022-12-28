@@ -11,7 +11,7 @@ function buildActivities(activity){
     let li = document.createElement('li')
     let btn = document.createElement('button')
     btn.addEventListener('click', handleDelete)
-    btn.textContent = ' delete'
+    btn.textContent = ' done'
     li.textContent = `${activity} `    
     li.appendChild(btn)
     document.querySelector('#activities').appendChild(li)
@@ -49,7 +49,7 @@ function timer () {
   const pause = document.getElementById("pause");
   let minusButton = document.getElementById("minus");
   let plusButton = document.getElementById("plus");
-  let startButton = document.getElementById("start")
+  let startButton = document.getElementById("start");
 
   let start = document.getElementById("start")
   start.addEventListener("click", function(event){
@@ -62,7 +62,7 @@ function timer () {
         intervalID = setInterval(timer, 1000);
         setTimeout(intervalID);
         event.target.id = "resume"
-        event.target.textContent = "resume timer"
+        event.target.textContent = "restart timer"
     }
 })
     
@@ -77,7 +77,6 @@ function timer () {
           event.target.textContent = "pause timer"
       }
       else {
-        intervalID = setInterval(timer, 1000);
           clearInterval(intervalID);
           minusButton.setAttribute("disabled", true)
           plusButton.setAttribute("disabled", true)
