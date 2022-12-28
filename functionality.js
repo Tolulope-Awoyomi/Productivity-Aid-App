@@ -68,3 +68,9 @@ function timer () {
       }
    });
 
+   const notes = document.querySelector('.notes')
+   const notesInput = document.querySelector('#note-input')
+   const submit = document.querySelector('#submit')
+
+  
+
