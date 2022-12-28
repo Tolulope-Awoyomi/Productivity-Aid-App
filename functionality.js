@@ -23,6 +23,7 @@ function handleDelete(e){
 }
 
 let intervalID = setInterval(timer, 1000);
+
 function timer () {
     let timer = document.getElementById("timer")
     let parsedNumber = parseInt(timer.innerText);
@@ -63,6 +64,7 @@ function timer () {
           minusButton.setAttribute("disabled", true)
           plusButton.setAttribute("disabled", true)
           event.target.id = "resume"
-          event.target.textContent = "resume timer"
+          event.target.textContent = "start timer"
       }
    });
+
