@@ -95,3 +95,14 @@ function timer () {
     }
    }
 
+function fetchActivities() {
+    fetch("https://www.boredapi.com/api/activity")
+    .then (function (response) {
+        return response.json();
+    })
+    .then (function (activities) {
+        renderActivities(activities)
+        console.log(activities)
+    });
+}
+
