@@ -117,6 +117,8 @@ function timer () {
     }
    }
 
+
+
 function fetchActivities() {
     fetch("https://www.boredapi.com/api/activity")
     .then (function (response) {
