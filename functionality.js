@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     function myActivities(activity){
-        document.getElementById("activities").appendChild(activity)
+        const activity = document.getElementById("activities").appendChild(activity)
+        const p = document.createElement('p')
+        const btn = document.createElement('button')
+        btn.addEventListener('click', handleDelete)
+        btn.textContent = 'x'
+        p.textContent = `${activity}`
+        p.appendChild(btn)
+        console.log(p)
+        document.querySelector("activities").appendChild(p)
     }
 });
