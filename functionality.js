@@ -82,5 +82,16 @@ function timer () {
     notes.innerHTML = list;
    }
 
-   
+   submit.onclick = function (event) {
+    event.preventDefault();
+    console.log(notesInput.value)
+    const content = notesInput.value;
+    console.log(notes)
+    if(content.length > 0) {
+        const p = document.createElement('p')
+        p.textContent = content
+        notes.append(p)
+        notesInput.value = ' ';
+    }
+   }
 
