@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         buildActivities(e.target.new_activity_description.value)
-
-       
+        form.reset()
     })
 
     function buildActivities(activity){
