@@ -106,3 +106,14 @@ function fetchActivities() {
     });
 }
 
+function renderActivities(activities) {
+    const main = document.querySelector('main');
+    activities.forEach(activity => {
+        const h2 = document.createElement('h2');
+        h2.innerHTML = activity.name;
+        main.appendChild(h2);
+    });
+}
+document.addEventListener('DOMContentLoaded', function () {
+    fetchActivities();
+})
