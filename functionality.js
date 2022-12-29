@@ -118,26 +118,43 @@ function timer () {
    }
 
 
-
 function fetchActivities() {
-    fetch("https://www.boredapi.com/api/activity")
+    fetch('http://www.boredapi.com/api/activity')
     .then (function (response) {
         return response.json();
     })
-    .then (function (activities) {
-        renderActivities(activities)
-        console.log(activities)
-    });
+    .then (function (activity) {
+        const container = document.querySelector('#activity_recommendation_container')
+        container.append(`${activity.activity   }`)
+    })
+    .catch (function (error) {
+        alert('Oops activities missing')
+        const container = document.querySelector('#activity_recommendation_container')
+        container.append(error.message)
+    })
 }
-
-function renderActivities(activities) {
-    const main = document.querySelector('main');
-    activities.forEach(activity => {
-        const h2 = document.createElement('h2');
-        h2.innerHTML = activity.name;
-        main.appendChild(h2);
-    });
-}
-document.addEventListener('DOMContentLoaded', function () {
+let suggest = document.getElementById("suggest")
+suggest.addEventListener('click', function () {
     fetchActivities();
 })
+
+// function postAct (activity) {
+//     const anchorElement = document.createElement('a');
+//     anchorElement.setAttribute('href', `${apiUrl}/activity/${activity}`)
+//     anchorElement.setAttribute('target', '_blank')
+//     anchorElement.innerText = post.title
+
+//     const postTitle = document.createElement('h5')
+//     postTitle.appendChild(anchorElement)
+
+//     return postTitle;
+// }
+
+// function renderActivities(activities) {
+//     const main = document.querySelector('main');
+//     activities.forEach(activity => {
+//         const h2 = document.createElement('h2');
+//         h2.innerHTML = activity.name;
+//         main.appendChild(h2);
+//     });
+// }
