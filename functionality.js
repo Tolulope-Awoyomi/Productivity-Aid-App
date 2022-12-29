@@ -125,7 +125,14 @@ function fetchActivities() {
     })
     .then (function (activity) {
         const container = document.querySelector('#activity_recommendation_container')
-        container.append(`${activity.activity   }`)
+        let li = document.createElement('li')
+        let btn = document.createElement('button')
+        btn.addEventListener('click', handleDelete)
+        btn.textContent = 'x' 
+        li.textContent = `${activity.activity}   `    
+        li.appendChild(btn)
+        container.appendChild(li)
+
     })
     .catch (function (error) {
         alert('Oops activities missing')
