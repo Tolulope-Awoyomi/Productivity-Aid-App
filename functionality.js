@@ -89,6 +89,7 @@ function timer () {
       }
    });
 
+
    const notes = document.querySelector('.notes')
    const notesInput = document.querySelector('#note-input')
    const submit = document.querySelector('#submit')
@@ -116,6 +117,8 @@ function timer () {
         notesInput.value = ' ';
     }
    }
+
+
 const timerButtons = document.getElementById('timerButtons')
 timerButtons.addEventListener("mouseover", (event) => {
     event.target.style.color = "red"
@@ -152,23 +155,4 @@ suggest.addEventListener('click', function () {
     fetchActivities();
 })
 
-// function postAct (activity) {
-//     const anchorElement = document.createElement('a');
-//     anchorElement.setAttribute('href', `${apiUrl}/activity/${activity}`)
-//     anchorElement.setAttribute('target', '_blank')
-//     anchorElement.innerText = post.title
 
-//     const postTitle = document.createElement('h5')
-//     postTitle.appendChild(anchorElement)
-
-//     return postTitle;
-// }
-
-// function renderActivities(activities) {
-//     const main = document.querySelector('main');
-//     activities.forEach(activity => {
-//         const h2 = document.createElement('h2');
-//         h2.innerHTML = activity.name;
-//         main.appendChild(h2);
-//     });
-// }
