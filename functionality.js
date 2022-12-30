@@ -116,6 +116,13 @@ function timer () {
         notesInput.value = ' ';
     }
    }
+const timerButtons = document.getElementById('timerButtons')
+timerButtons.addEventListener("mouseover", (event) => {
+    event.target.style.color = "red"
+    setTimeout(() => {
+        event.target.style.color = "";
+    }, 600);
+}, false);
 
 
 function fetchActivities() {
