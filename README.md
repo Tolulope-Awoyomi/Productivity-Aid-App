@@ -35,7 +35,7 @@ There are three files:
 
 That's it! I hope you enjoy my Productivity Aid App!
 
-![Screenshot Final](https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-build-the-example/finished_product_ss.png)
+![Screenshot Final] (https://user-images.githubusercontent.com/111917239/210122723-d4eb300b-5aab-4681-99fd-d2dc62cddfb6.png) 
 
 
 
