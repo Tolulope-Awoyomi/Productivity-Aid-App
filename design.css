@@ -6,21 +6,21 @@ html {
 
 body {
     font: sans-serif;
-    min-height: 100%;
-    min-width: 100%;
-    background: linear-gradient( grey, white, grey);
+    background-color: rgb(29,161,242);
+    border: 40px solid rgb(29,161,242);
+    
+}
+
+#create-activity-form, #activity-list, #timerButtons, #notes-form, #submit, .notes, #n, #mn, #activity-recommendation, #suggest, #activity_recommendation_container {
+    font: sans-serif;
 }
 
 #timer {
     font: sans-serif;
-    background-color: blueviolet;
-    color: white;
+    background-color: white;
+    color: black;
     display:table;
     padding: 15px;
-}
-
-button {
-    font: sans-serif;
 }
 
 #main-content {
@@ -31,9 +31,5 @@ button {
     align-items: center;
     flex-direction: column;
     border: 1px solid #333;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 15px 20px 18px 18px;
-    border-radius: 5px;
-    box-shadow: 2px 5px 5px #333;
 }
 
